@@ -1,0 +1,191 @@
+.en_tete{
+    font-family: monospace;
+    position: static;
+    background-color: navy;
+    font: bold;
+    text-align: center;
+    color: white;
+    font-size: xx-large;
+    transition: 0.5s;
+    animation: alternate-reverse;
+    position: sticky;
+    top: 0;
+}
+
+.headlinks span{
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.7s;
+    padding-left: 1%;
+    padding-right: 1%;
+}
+.headlinks span:after{
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+.link:hover{
+    background-color: white;
+    animation: both;
+    color: navy;
+    animation: backwards;
+    transition: all;
+    font-size: larger;
+}
+
+
+.bloc{
+    padding-top: 4%;
+    display: inline-block;
+}
+
+.titre{
+
+    width: 20%;
+    padding-left: 4%;
+    padding-top: 4%;
+    display: flex;
+    background-color: linear-gradient(to right, #FDFBFB, #EBEDEE 70%);
+    text-align: right;
+    border-radius: 4%;
+    animation: forwards;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+    float: left;
+    width: 20%;
+}
+
+.titre span{
+
+    font-size:5vw;
+    background: linear-gradient(to right, #30CFD0 0%, #330867 100%);
+    -webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-stretch: ultra-expanded;
+    animation: infinite;
+    transition: ease-in-out;
+}
+
+.carrousel{
+    padding-left: 4%;
+    float: left;
+    width: 70%;
+    position: relative;
+    height: fit-content;
+    animation: backwards;
+    transition: all;
+}
+
+.imageswap{
+    position:inherit;
+    height: 40%;
+    width: 20%;
+    border-radius: 6%;
+    transition: 0.5s;
+}
+
+.imageswap:hover{
+    padding-left: 1%;
+    transition: 0.5s;
+    animation: backwards;
+    position: static;
+    width: 21%;
+    height: 41;
+    
+}
+
+.centerblock{
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+}
+
+.icone{
+    height: 10%;
+    width: 10%;
+    transition: ease-in-out;
+    animation: infinite;
+}
+
+
+.screen{
+    height: 50%;
+    width: 100%;
+    margin-top: 10%;
+    font-size: large;
+    color: greenyellow;
+    background-color: black;
+    font-family: monospace;
+    font-style: normal;
+    font-variant: small-caps;
+    font-weight: lighter;
+    border-radius: 10%;
+    border: springgreen;
+    border-style: ridge;
+    text-align: center;
+    transition: all;
+}
+.form{
+    font-family: monospace;
+    font-style: normal;
+    font-variant: small-caps;
+    font-weight: lighter;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    padding: 20%;
+}
+.inputform{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-align: center;
+    transition: all;
+    border-radius: 10%;
+}
+
+.button {
+    border-radius: 4px;
+    background-color: black;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 28px;
+    padding: 20px;
+    width: 200px;
+    transition: all 0.5s;
+    cursor: pointer;
+
+    
+    margin-top: 20%;
+    margin-left: auto;
+    margin-right: auto;
+}
+  
+.button span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+  
+.button span:after {
+    content: '\00bb';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+  
+.button:hover span {
+    padding-right: 25px;
+}
+  
+.button:hover span:after {
+    opacity: 1;
+    right: 0;
+}
