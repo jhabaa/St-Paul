@@ -139,17 +139,19 @@
     float: left;
     background-color: whitesmoke;
     border-radius: 5px;
-    box-shadow: 10px 10px 5px #aaaaaa62;
+    box-shadow: 10px 10px 10px 10px #aaaaaa62;
     text-align: center;
     height: 25vw;
-    width: 20%;
+    width: 30%;
     transition: all;
     animation: infinite;
 }
 
 .bulletittle{
     border-radius: 10px;
-    box-shadow: 1px 1px 1px 1px black;
+    border: #00000000;
+    background-image: linear-gradient(to bottom, #ffffff 0%, #0090e9 100%);
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.454);
     display: inline-block;
     position: relative;
     text-align: center;
@@ -167,7 +169,7 @@
     height: 2px;
     bottom: 0;
     left: 0;
-    background-color: #000000;
+    background-color: #00000071;
     transform-origin: bottom right;
     transition: transform 0.25s ease-out;
 }
@@ -213,32 +215,31 @@
 }
 
 .button {
-    border-radius: 4px;
-    background-color: black;
+    background-color: #00000000;
     border: none;
     color: #FFFFFF;
     text-align: center;
-    font-size: 28px;
-    padding: 20px;
-    width: 200px;
+    text-overflow: clip;
+    font-size: 3vw;
+    
+    animation: both;
     transition: all 0.5s;
     cursor: pointer;
-
-    
-    margin-top: 20%;
     margin-left: auto;
     margin-right: auto;
 }
   
 .button span {
     cursor: pointer;
+    border-radius: 10px;
     display: inline-block;
     position: relative;
     transition: 0.5s;
+    animation: infinite;
 }
   
 .button span:after {
-    content: '\00bb';
+    content: '';
     position: absolute;
     opacity: 0;
     top: 0;
@@ -247,10 +248,25 @@
 }
   
 .button:hover span {
-    padding-right: 25px;
+    background-color: #fcfcfcf7;
+    color: navy;
+    text-shadow: #000000;
+    scale: 1.2;
+    transition: all;
 }
   
 .button:hover span:after {
     opacity: 1;
     right: 0;
+    transition: 5ms;
+}
+
+.footer{
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: rgba(255, 0, 0, 0);
+    color: rgb(0, 0, 0);
+    text-align: center;
 }
