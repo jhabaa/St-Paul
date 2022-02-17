@@ -1,9 +1,10 @@
 .en_tete{
-    font-family: monospace;
+    display: flex;
+    justify-content: space-between;
+    max-height: 1%;
     position: static;
-    background-color: navy;
+    background-color: rgba(255, 255, 255, 0.55);
     font: bold;
-    text-align: center;
     color: white;
     font-size: xx-large;
     transition: 0.5s;
@@ -11,14 +12,43 @@
     position: sticky;
     top: 0;
 }
+.logoInHead{
+    justify-items: left;
+    background-color: #ffffff;
+    display: flex;
+    text-align: center;
+}
+.title_name{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: navy;
+    justify-self: left;
+    background-color: #ffffff;
+    top: 0%;
+    text-align: left;
+    text-overflow: clip;
+}
+.iconSmallTitle{
+    text-rendering: geometricPrecision;
+    font-size: medium;
+}
+.iconBigTitle{
+    text-rendering: auto;
+    font-size: x-large;
+    font-weight: bold;
+
+}
 
 .headlinks span{
     cursor: pointer;
     display: inline-block;
     position: relative;
+    animation: both;
     transition: 0.7s;
-    padding-left: 1%;
-    padding-right: 1%;
+    padding-left: 1vw;
+    padding-right: 1vw;
 }
 .headlinks span:after{
     content: '\00bb';
@@ -37,26 +67,72 @@
     font-size: larger;
 }
 
+.headButtons{
+    
+}
 
 .bloc{
     padding-top: 4%;
-    display: inline-block;
+    display: flex;
+    align-content: space-around;
     margin-bottom: 5%;
 }
 
 .titre{
-
-    width: 20%;
+    width: min-content;
     padding-left: 4%;
     padding-top: 4%;
     display: flex;
+    flex-direction: column;
     background-color: linear-gradient(to right, #FDFBFB, #EBEDEE 70%);
     text-align: right;
     border-radius: 4%;
     animation: forwards;
     transition: cubic-bezier(0.075, 0.82, 0.165, 1);
     float: left;
-    width: 20%;
+}
+.buttonTitle{
+    display: flex;
+
+}
+.button1{
+    background-color: rgba(220, 220, 220, 0.091);
+    padding: 0vw 1vw 0vw 1vw ;
+    border-radius: 3vw;
+    border-style: solid;
+    font-size: 2vw;
+    animation: infinite;
+    transition: 0.5s;
+}
+.button1:hover{
+    border-color: #0090e9;
+    color: navy;
+    border-radius: 0vw;
+    animation: both;
+    transition: 0.5s;
+}
+
+.button1:after :hover{
+    content:'re' ;
+    border-color: #e90036;
+    color: navy;
+    border-radius: 0vw;
+    animation: both;
+    transition: 0.5s;
+}
+
+.button2{
+    background-color: navy;
+    color: white;
+    font-size: 2vw;
+    border-radius: 3vw;
+    border-style: solid;
+}
+.button2:hover{
+    border-color: #0090e9;
+    border-radius: 0vw;
+    animation: both;
+    transition: 0.5s;
 }
 
 .titre span{
@@ -100,6 +176,91 @@
     
 }
 
+.msspbullets{
+    display:flex ;
+    justify-content: space-between;
+}
+.mainBullet{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    border: none;
+    box-shadow: 10px 10px 10px 10px #aaaaaa62;
+    border-radius: 2vw;
+    background: navy;
+    margin: auto;
+}
+.bullet{
+    display: flex;
+    flex-direction: column;
+    color: navy;
+    border-style: groove;
+    border-width: 0.1vw;
+    box-shadow: 10px 10px 10px 10px #aaaaaa62;
+    border-radius: 2vw;
+    background: rgb(255, 255, 255);
+    margin: auto;
+}
+.mainBullet span{
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+}
+.bullet span{
+    font-size: 4vw;
+    font-weight: bold;
+    text-align: center;
+    padding: 2vw;
+}
+.mainBullet ul{
+    padding-right: 1vw;
+    font-size: 2vw;
+    padding-bottom: 2vw;
+    border: none;
+    transition: 0.5s;
+    animation: backwards;
+}
+.mainBullet li{
+    padding: 1vw;
+    padding-right: 2vw;
+    transition: 0.5s;
+    animation: both;
+}
+.mainBullet li:hover{
+    position: relative;
+    padding: 1vw;
+    padding-left: 2vw;
+    cursor:pointer ;
+    color: #30CFD0;
+    animation: infinite;
+    transition: 0.5s;
+    
+}
+.bullet ul{
+    padding-right: 1vw;
+    font-size: 2vw;
+    padding-bottom: 2vw;
+    border: none;
+}
+.bullet li{
+    padding: 1vw;
+    padding-right: 2vw;
+    animation: both;
+    transition: 0.5s;
+}
+.bullet li:hover{
+    padding: 1vw;
+    padding-left: 2vw;
+    cursor:pointer ;
+    color: #30CFD0;
+    animation: infinite;
+    transition: 0.5s;
+}
+.mainBullet ul:after{
+    
+}
+
+
 .centerblock{
     margin-left: auto;
     margin-right: auto;
@@ -107,8 +268,8 @@
 }
 
 .icone{
-    height: 10%;
-    width: 10%;
+    max-height: 8vw;
+    max-width: 8vw;
     transition: ease-in-out;
     animation: infinite;
 }
@@ -136,8 +297,9 @@
 }
 
 .bulles{
-    float: left;
-    background-color: whitesmoke;
+    position: absolute;
+    left: 10%;
+    background-color: rgba(245, 245, 245, 0.283);
     border-radius: 5px;
     box-shadow: 10px 10px 10px 10px #aaaaaa62;
     text-align: center;
@@ -215,20 +377,26 @@
 }
 
 .button {
-    background-color: #00000000;
-    border: none;
-    color: #FFFFFF;
+    background-color: #ffffff;
+    border-style: solid;
+    color: navy;
+    border-radius: 20px;
     text-align: center;
     text-overflow: clip;
-    font-size: 3vw;
-    
+    font-size: 2vw;
     animation: both;
     transition: all 0.5s;
     cursor: pointer;
     margin-left: auto;
     margin-right: auto;
 }
-  
+.button:hover{
+    color: #30CFD0;
+    transition: 0.5s;
+    animation: both;
+    border-style: dotted;
+}
+
 .button span {
     cursor: pointer;
     border-radius: 10px;
